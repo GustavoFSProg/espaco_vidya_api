@@ -49,6 +49,7 @@ async function update(req, res) {
     //   api_key: process.env.API_KEY,
     //   api_secret: process.env.API_SECRET,
     // })
+    const text = 'aaaa'
 
     // cloudinary.uploader.upload(req.file.path, function (result, error) {
     //   // console.log(result, error)
