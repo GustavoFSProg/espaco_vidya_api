@@ -28,7 +28,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development nodemon --exec babel-node src/index.js",
-    "start": "NODE_ENV=production node dist",
+    "start": "NODE_ENV=production nodemon --exec babel-node dist",
     "build": "babel src -d dist",
     "lint": "eslint --ext .js --ignore-path .gitignore ."
   }
