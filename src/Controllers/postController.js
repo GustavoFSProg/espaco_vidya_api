@@ -1,4 +1,3 @@
-import md5 from 'md5'
 var cloudinary = require('cloudinary')
 
 import { PrismaClient } from '@prisma/client'
@@ -30,7 +29,7 @@ async function register(req, res) {
     const user = await prisma.posts.create({
       data: {
         title: req.body.title,
-        image: 'imagem',
+        image: imagem,
         autor: req.body.autor,
         text: req.body.text,
       },

@@ -1,8 +1,8 @@
 import postController from './Controllers/postController'
 import { Router } from 'express'
 
-import uploadConfig from '../src/config/uploadConfig'
 import multer from 'multer'
+import uploadConfig from '../src/config/uploadConfig'
 
 const upload = multer(uploadConfig)
 
