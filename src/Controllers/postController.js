@@ -44,18 +44,18 @@ async function register(req, res) {
 
 async function update(req, res) {
   try {
-    cloudinary.config({
-      cloud_name: process.env.CLOUD_NAME,
-      api_key: process.env.API_KEY,
-      api_secret: process.env.API_SECRET,
-    })
+    // cloudinary.config({
+    //   cloud_name: process.env.CLOUD_NAME,
+    //   api_key: process.env.API_KEY,
+    //   api_secret: process.env.API_SECRET,
+    // })
 
-    cloudinary.uploader.upload(req.file.path, function (result, error) {
-      // console.log(result, error)
-      imagem = result.secure_url
-      resultado = result
-      console.log(resultado)
-    })
+    // cloudinary.uploader.upload(req.file.path, function (result, error) {
+    //   // console.log(result, error)
+    //   imagem = result.secure_url
+    //   resultado = result
+    //   console.log(resultado)
+    // })
 
     const { id } = req.params
 
@@ -64,7 +64,7 @@ async function update(req, res) {
       data: {
         name: req.body.name,
         email: req.body.email,
-        avatar: imagem,
+        avatar: 'imagem',
         password: md5(req.body.password, process.env.SECRET),
       },
     })

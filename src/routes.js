@@ -9,9 +9,7 @@ const upload = multer(uploadConfig)
 const route = Router()
 
 // route.get('/', postController.getAll)
-route.get('/', (req, res) => {
-  return res.status(200).send({ msg: 'Entrou no get' })
-})
+route.get('/', postController.getAll)
 route.post('/register', upload.single('image'), postController.register)
 
 export default route
