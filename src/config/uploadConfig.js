@@ -1,5 +1,4 @@
-import multer from 'multer'
-import path from 'path'
+const multer = require('multer')
 
 module.exports = {
   storage: new multer.diskStorage({
